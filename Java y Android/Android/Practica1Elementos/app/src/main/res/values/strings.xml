@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="txt_nombre1">Descripcion</string>
+    <string name="label_contacto">Contacto</string>
+    <string name="label_telefono">Telefono cel.</string>
+    <string name="label_correo">Correo</string>
+    <string name="txt_celular">Ingresa celular</string>
+    <string name="txt_correo1">Ingresa correo</string>
+    <string name="txt_solicitud">Solicitud</string>
+    <string name="txt_solicitud1">Ingresa la solicitud</string>
+    <string name="txt_description">Ingresa la descripción</string>
+    <string name="btn_registro">Registro solicitud</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="img_content">Imagen a cargar</string>
+</resources>

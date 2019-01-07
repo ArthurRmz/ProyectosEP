@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.7.8  Built on : May 19, 2018 (07:06:11 BST) -->
+<serviceGroup>
+    <service name="concatenarNombreService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="edu.itq.soa.impl.ConcatenarNombreServiceMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">edu.itq.soa.impl.ConcatenarNombreServiceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="concatenarNombre" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://itq.edu/soa">
+            <actionMapping>http://itq.edu/soa/concatenarNombre</actionMapping>
+            <outputActionMapping>http://itq.edu/soa/NewPortType/concatenarNombreResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

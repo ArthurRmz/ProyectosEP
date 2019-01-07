@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.7.8  Built on : May 19, 2018 (07:06:11 BST) -->
+<serviceGroup>
+    <service name="calcular">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.soa.aritmetica.CalcularMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.soa.aritmetica.CalcularSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="calcular" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://soa.com/aritmetica">
+            <actionMapping>soa.com/aritmetica/calcular</actionMapping>
+            <outputActionMapping>http://soa.com/aritmetica/calcularPortType/calcularResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

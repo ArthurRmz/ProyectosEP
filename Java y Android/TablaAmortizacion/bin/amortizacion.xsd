@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soa.com" targetNamespace="http://soa.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="datos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Monto" type="xs:double"/>
+				<xs:element name="TasaInteres" type="xs:double"/>
+				<xs:element name="Plazo" type="xs:int"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="generarTabla">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="Pago" type="tns:Pago"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Pago">
+		<xs:sequence>
+			<xs:element name="PagoMensual" type="xs:double"/>
+			<xs:element name="Interes" type="xs:double"/>
+			<xs:element name="Principal" type="xs:double"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

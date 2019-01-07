@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.apache.xmlbeans:xmlbeans:2.6.0',
+    	files("dest/CuentaCheques-1.0.0.jar")
+
+    testCompile 'junit:junit:4.12'
+}

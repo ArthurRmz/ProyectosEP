@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:tns="http://soa.com" targetNamespace="http://soa.com">
+	<xs:element name="solicitarCredito">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Curp" type="xs:string"/>
+				<xs:element name="Domicilio" type="xs:string"/>
+				<xs:element name="Salario" type="xs:double"/>
+				<xs:element name="Monto" type="xs:double"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="consultarBuro">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="respuesta" type="xs:boolean"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

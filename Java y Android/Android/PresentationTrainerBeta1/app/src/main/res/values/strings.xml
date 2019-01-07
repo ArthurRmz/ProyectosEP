@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PresentationTrainerBeta1</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Presentation Trainer</string>
+    <string name="nav_header_subtitle">presentationTrainer@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="fragmentHome1">Bienvenido gracias por usar Presentation Trainer</string>
+    <string name="fragmentData1">PRESIONA EL BOTON PARA VER LOS DISPOSITIVOS BLUETOOTH</string>
+    <string name="fragmentStatistics1">DATOS ALMACENADOS</string>
+    <string name="fragmentAbout1">Desarrolladores: </string>
+    <string name="fragmentAbout2">Arturo Ramírez Hernández </string>
+    <string name="fragmentAbout3">Luis Rodrigo Gomez Perez </string>
+    <string name="userInterfazL1">CONTROL LED</string>
+    <string name="userInterfazL2">Calificación:</string>
+    <string name="userInterfazL3">Descripción:</string>
+    <string name="dispositivosBtL1">DISPOSITIVOS VINCULADOS:</string>
+</resources>

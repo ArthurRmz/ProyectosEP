@@ -1,0 +1,47 @@
+<project basedir="." name="XMLBeansGenerator" default="build">
+	<property file="build.properties" />
+	<property environment="env" />
+	<property name="source.folder" value="src/main/java" />
+
+	<target name="init">
+		<echo message="xmlbeans.home: ${xmlbeans.home}" />
+
+		<!-- check for xbean.jar from binary distribution -->
+		<available property="xmlbeans.lib" value="${xmlbeans.home}/lib" file="${xmlbeans.home}/lib/xbean.jar" />
+
+		<fail message="Set XMLBEANS_HOME in your environment." unless="xmlbeans.lib" />
+
+		<echo message="xmlbeans.lib: ${xmlbeans.lib}" />
+
+		<path id="xmlbeans.path">
+			<fileset dir="${xmlbeans.lib}" includes="*.jar" />
+		</path>
+
+		<taskdef name="xmlbean" classname="org.apache.xmlbeans.impl.tool.XMLBean" classpathref="xmlbeans.path" />
+		<mkdir dir="dest" />
+	</target>
+
+	<!-- ========================== clean ==== -->
+
+	<target name="clean">
+		<delete dir="build" />
+		<delete dir="${source.folder}" />
+		<delete dir="dest" />
+	</target>
+
+	<!-- ========================== build ==== -->
+
+	<target name="build" depends="clean,init,jar-gen">
+	</target>
+
+	<target name="schemas.check">
+		<uptodate property="schemas.notRequired" targetfile="${dest.dir}/${schema.name}.jar">
+			<srcfiles dir="${schemas.dir}" includes="${schema.name}.${type}" />
+		</uptodate>
+	</target>
+
+	<target name="jar-gen" depends="clean,init,schemas.check" unless="schemas.notRequired">
+		<xmlbean schema="${schemas.dir}/${schema.name}.${type}" destfile="${dest.dir}/${schema.name}-${jar.version}.jar" classgendir="build/classes" srconly="No" srcgendir="${source.folder}" javasource="1.6" verbose="yes" classpathref="xmlbeans.path" debug="on" />
+	</target>
+
+</project>

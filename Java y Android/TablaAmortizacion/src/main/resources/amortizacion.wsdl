@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://new.webservice.namespace" targetNamespace="http://new.webservice.namespace" xmlns:tns1="http://soa.com">
+		<wsdl:import location="amortizacion.xsd" namespace="http://soa.com"/>
+	<wsdl:types>
+		<xs:schema targetNamespace="http://new.webservice.namespace" elementFormDefault="qualified"/>
+	</wsdl:types>
+	<wsdl:message name="NewMessageRequest">
+		<wsdl:part name="parameter" element="tns1:datos"/>
+	</wsdl:message>
+	<wsdl:message name="NewMessageResponse">
+		<wsdl:part name="parameter" element="tns1:generarTabla"/>
+	</wsdl:message>
+	<wsdl:portType name="NewPortType">
+		<wsdl:operation name="generar">
+			<wsdl:input message="tns:NewMessageRequest"/>
+			<wsdl:output message="tns:NewMessageResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="NewBinding" type="tns:NewPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="generar">
+			<soap:operation soapAction="soa.com/generar"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="generarTabla">
+		<wsdl:port name="NewPort" binding="tns:NewBinding">
+			<soap:address location="http://localhost:8082/axis2/services/generarTabla"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

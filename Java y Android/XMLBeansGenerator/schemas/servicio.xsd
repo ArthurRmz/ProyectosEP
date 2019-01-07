@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://servicios.com/qro" xmlns:tns="http://servicios.com/qro">
+	<xs:element name="servicio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cliente" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

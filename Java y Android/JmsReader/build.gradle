@@ -1,0 +1,57 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+def COMPONENT_VERSION = '1.1.0'
+def CONF_FOLDER = 'env/dev'
+def AXIS2_VERSION = '1.7.8'
+def SPRING_VERSION="5.1.2.RELEASE"
+def JBOSS_HOME="D:/opt/jboss-4.2.3.GA"
+
+dependencies {
+    compile "org.springframework:spring-jdbc:${SPRING_VERSION}",
+			"mysql:mysql-connector-java:5.1.6",
+			"org.apache.logging.log4j:log4j:2.8.1",	
+			"org.springframework:spring-jms:${SPRING_VERSION}",
+            "org.springframework:spring-context-support:${SPRING_VERSION}",
+			"org.springframework:spring-web:${SPRING_VERSION}",
+			"org.springframework:spring-webmvc:${SPRING_VERSION}",
+            "org.apache.xmlbeans:xmlbeans:2.6.0"
+            
+    providedCompile group: 'jboss', name: 'jboss-j2ee' , version:'4.2.2.GA',
+    "log4j:log4j:1.2.14"
+    testCompile 'junit:junit:4.12'
+}
+
+war {
+	archiveName "SpringConsumer-${COMPONENT_VERSION}.war"
+	from("${CONF_FOLDER}") {
+		into "WEB-INF/classes"
+		include "*.properties"
+	}
+	webInf {
+		from ("${CONF_FOLDER}") {
+			include "*.xml"
+		}
+	}
+}
+
+compileJava.dependsOn {
+	[clean]
+}
+
+// Tarea para copiar temporalmente a una carperta lib las dependencias.
+task copyCompileLibs(type: Copy) {
+    into "libAxis2"
+    from configurations.compile
+}
+
+task deploy(type: Copy, dependsOn: war) {
+	into "${JBOSS_HOME}/server/default/deploy"
+	from "build/libs"
+}

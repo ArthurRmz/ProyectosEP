@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:tns1="http://soa.com" targetNamespace="http://soa.com">
+	<xs:element name="reqArturo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="apellidoPaterno" type="xs:string"/>
+				<xs:element name="apellidoMaterno" type="xs:string"/>
+				<xs:element name="nombres" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resArturo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="iniciales" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

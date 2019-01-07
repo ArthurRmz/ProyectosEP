@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://soa.com" xmlns:tns1="http://soa.com">
+	<xs:element name="datos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="numero1" type="xs:int"/>
+				<xs:element name="numero2" type="xs:int"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respuesta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="mensaje" type="xs:string"/>
+	</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

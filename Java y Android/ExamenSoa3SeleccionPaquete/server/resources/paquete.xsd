@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://soa.com" xmlns:tns="http://soa.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="entradaPaquete">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="monto" type="xs:double"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="salidaPaquete">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="paquete" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+  </wsdl:types>
+</wsdl:definitions>

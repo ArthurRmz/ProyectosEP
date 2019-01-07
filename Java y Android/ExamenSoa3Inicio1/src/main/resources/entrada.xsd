@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soa.com" targetNamespace="http://soa.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="resquestService">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombres" type="xs:string"/>
+				<xs:element name="apePaterno" type="xs:string"/>
+				<xs:element name="apeMaterno" type="xs:string"/>
+				<xs:element name="correo" type="xs:string"/>
+				<xs:element name="noTarjeta" type="xs:int"/>
+				<xs:element name="codSegTarjeta" type="xs:int"/>
+				<xs:element name="fechaExpiracion" type="xs:string"/>
+				<xs:element name="monto" type="tns:montoPagar"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="responseService">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="respuesta" type="xs:boolean"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="montoPagar">
+		<xs:restriction base="xs:double">
+			<xs:enumeration value="109"/>
+			<xs:enumeration value="149"/>
+			<xs:enumeration value="199"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

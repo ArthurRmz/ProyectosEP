@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.7.8 Built on : May 19, 2018 (07:06:11 
+	BST) -->
+<serviceGroup>
+	<service name="bancoSpringInit" class="com.soa.BancoSpringInit">
+		<parameter name="ServiceTCCL">composite</parameter>
+		<parameter name="ServiceClass">com.soa.BancoSpringInit</parameter>
+		<parameter name="Load-on-startup">true</parameter>
+		<operation name="bancoSpringInit">
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+		</operation>
+	</service>
+	<service name="banco">
+		<messageReceivers>
+			<messageReceiver
+				mep="http://www.w3.org/ns/wsdl/in-out"
+				class="com.soa.BancoMessageReceiverInOut" />
+		</messageReceivers>
+		<parameter name="ServiceClass">com.soa.BancoImpl</parameter>
+				<parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+		<parameter name="SpringBeanName">bancoImpl</parameter>
+		<parameter name="SpringContextLocation">applicationContext.xml</parameter>
+		<parameter name="useOriginalwsdl">true</parameter>
+		<parameter name="modifyUserWSDLPortAddress">true</parameter>
+		<operation name="checarSaldo"
+			mep="http://www.w3.org/ns/wsdl/in-out"
+			namespace="http://new.webservice.namespace">
+			<actionMapping>soa.com/checarSaldo</actionMapping>
+			<outputActionMapping>http://new.webservice.namespace/NewPortType/checarSaldoResponse
+			</outputActionMapping>
+		</operation>
+	</service>
+</serviceGroup>

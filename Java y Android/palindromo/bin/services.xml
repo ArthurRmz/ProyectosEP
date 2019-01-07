@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.7.8  Built on : May 19, 2018 (07:06:11 BST) -->
+<serviceGroup>
+    <service name="esPalindromo">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.soa.palindromo.EsPalindromoMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.soa.palindromo.EsPalindromoImpl</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="palindromo" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://new.webservice.namespace">
+            <actionMapping>soa.com/palindromo/palindromo</actionMapping>
+            <outputActionMapping>http://new.webservice.namespace/NewPortType/palindromoResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

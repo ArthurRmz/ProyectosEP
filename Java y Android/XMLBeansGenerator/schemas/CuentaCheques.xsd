@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.banco.com/cuentas">
+	<xs:element name="CuentaCheques">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="numeroCuenta" type="xs:string"/>
+				<xs:element name="cuentaHabiente" type="xs:string"/>
+				<xs:element name="credito" type="xs:double"/>
+			</xs:sequence>		
+		</xs:complexType>	
+	</xs:element>
+</xs:schema>

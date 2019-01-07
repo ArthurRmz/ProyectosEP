@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://soa.com" xmlns:tns="http://soa.com">
+	<xs:element name="credito">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="apellidos" type="xs:string"/>
+				<xs:element name="curp" type="xs:string"/>
+				<xs:element name="domicilio" type="xs:string"/>
+				<xs:element name="salario" type="xs:double"/>
+				<xs:element name="monto" type="xs:double"/>
+				<xs:element name="tasaInteres" type="xs:double"/>
+				<xs:element name="plazo" type="xs:int"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_height">60dp</dimen>
+    <dimen name="layout_height">149dp</dimen>
+    <dimen name="label_height" >21dp</dimen>
+    <dimen name="txt_height" >43dp</dimen>
+    <dimen name="txt_height1" >46dp</dimen>
+</resources>

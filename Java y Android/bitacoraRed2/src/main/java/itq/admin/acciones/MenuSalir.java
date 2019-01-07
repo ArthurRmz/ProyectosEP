@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package itq.admin.acciones;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+/**
+ * @author arthur
+ *
+ */
+public class MenuSalir implements ActionListener{
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.exit(0);
+	}
+	
+}

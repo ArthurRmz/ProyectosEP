@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.7.8  Built on : May 19, 2018 (07:06:11 BST) -->
+<serviceGroup>
+    <service name="paquete">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.soa.PaqueteMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.soa.PaqueteImpl</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="asignar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://new.webservice.namespace">
+            <actionMapping>soa.com/asignar</actionMapping>
+            <outputActionMapping>http://new.webservice.namespace/NewPortType/asignarResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

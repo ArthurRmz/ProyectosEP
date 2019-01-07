@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">presentationTrainer</string>
+    <string name="txt_user">Usuario</string>
+    <string name="txt_password">Contraseña</string>
+    <string name="btn_ingresar">Login</string>
+    <string name="imageView_user">Imagen del login</string>
+</resources>

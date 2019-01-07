@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soa.com/aritmetica" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://soa.com/aritmetica">
+    <xs:element name="calculator">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="operator" type="xs:string"/>
+                <xs:element name="number1" type="xs:double"/>
+                <xs:element name="number2" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="calculatorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultado" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

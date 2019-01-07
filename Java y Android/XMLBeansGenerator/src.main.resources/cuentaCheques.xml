@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CuentaCheques xsi:schemaLocation="http://www.banco.com/cuentas CuentaCheques.xsd" xmlns="http://www.banco.com/cuentas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<credito>255000000</credito>
+	
+	<numeroCuenta>1111-2222-3333-4444</numeroCuenta>
+	<cuentaHabiente>Bill Gates</cuentaHabiente>
+
+</CuentaCheques>
